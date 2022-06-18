@@ -1,0 +1,48 @@
+﻿@model TestAll.EF.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form action="" method="post">
+    <label for="id">ID: </label>
+    <input type="text" id="id" name="Id" value="@(Model == null ? "" : Model.Id)" />
+    @Html.ValidationMessage("Id", "", new { @class = "text-danger" }, "span")
+    <br />
+
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="Name" value="@(Model == null ? "" : Model.Name)" />
+    @Html.ValidationMessage("Name", "", new { @class = "text-danger" }, "span")
+    <br />
+
+    <label for="email">Email: </label>
+    <input type="text" id="email" name="Email" value="@(Model == null ? "" : Model.Email)" />
+    @Html.ValidationMessage("Email", "", new { @class = "text-danger" }, "span")
+    <br />
+
+    <label for="dob">Dob: </label>
+    <input type="date" id="dob" name="Dob" value="@(Model == null ? "" : Model.Dob)" />
+    @Html.ValidationMessage("Dob", "", new { @class = "text-danger" }, "span")
+    <br />
+
+    <label>Gender: </label>
+    <input type="radio" id="male" name="Gender" value="male" @(Model != null && Model.Gender == ("male") ? "checked" : "") /><label for="male">Male</label>
+    <input type="radio" id="female" name="Gender" value="female" @(Model != null && Model.Gender == ("female") ? "checked" : "") /><label for="female">Female</label>
+    <input type="radio" id="other" name="Gender" value="other" @(Model != null && Model.Gender == ("other") ? "checked" : "") /><label for="other">Other</label>
+    @Html.ValidationMessage("Gender", "", new { @class = "text-danger" }, "span")
+
+
+    <br />
+
+    <label>Department: </label>
+    <select name="Dept">
+        <option value="cs" @(Model != null && Model.Dept == "cs" ? "selected" : "")>CS</option>
+        <option value="eee" @(Model != null && Model.Dept == "eee" ? "selected" : "")>EEE</option>
+    </select>
+    @Html.ValidationMessage("Dept", "", new { @class = "text-danger" }, "span")
+    <br />
+    <br />
+
+    <input class="btn btn-primary" type="submit" value="Edit" />
+</form>
+

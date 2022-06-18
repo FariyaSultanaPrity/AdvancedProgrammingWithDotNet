@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DotNetTestModelStoreContainer" CdmEntityContainer="DotNetTestEntities">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DotNetTestModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

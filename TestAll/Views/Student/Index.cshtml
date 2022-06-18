@@ -1,0 +1,33 @@
+﻿@model List<TestAll.EF.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Serial</th>
+        <th>Id</th>
+        <th>Dob</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Dept</th>
+    </tr>
+    @foreach (var b in Model)
+    {
+<tr>
+    <td>@b.Name </td>
+    <td>@b.Serial</td>
+    <td>@b.Id</td>
+    <td>@b.Dob</td>
+    <td>@b.Gender</td>
+    <td>@b.Email</td>
+    <td>@b.Dept</td>
+
+    <td><a class="btn btn-info" href="/Student/Edit/@b.Serial">Edit</a></td>
+    <td><a class="btn btn-danger" href="/Student/Delete/@b.Serial">Delete</a></td>
+</tr>
+    }
+</table>
+
